@@ -21,4 +21,15 @@ export class LinkedList {
     this.node.value = value;
     this.node.next = node;
   }
+
+  size() {
+    if (this.node === null) return 0;
+    let numOfNodes = 1;
+    let node = this.node;
+    while (node.next) {
+      numOfNodes++;
+      node = node.next;
+    }
+    return numOfNodes;
+  }
 }

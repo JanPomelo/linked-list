@@ -6,3 +6,4 @@ newList.append(42);
 newList.append(88);
 newList.prepend('deine Mutter');
 console.log(newList);
+console.log(newList.size());
