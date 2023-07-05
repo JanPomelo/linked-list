@@ -118,4 +118,18 @@ export class LinkedList {
     }
     return null;
   }
+
+  toString() {
+    if (!this.node) {
+      return null;
+    }
+    let node = this.node;
+    let result = node.value.toString();
+    while (node.next) {
+      result = result + ' -> ' + node.next.value.toString();
+      node = node.next;
+    }
+    result = result + ' -> ' + node.next;
+    return result;
+  }
 }
