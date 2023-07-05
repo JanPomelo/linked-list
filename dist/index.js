@@ -10,4 +10,4 @@ newList.prepend('deine Mutter');
 // newList.pop();
 // newList.pop();
 // newList.prepend(42);
-console.log(newList.contains(88));
+console.log(newList.at(2));

@@ -99,4 +99,23 @@ export class LinkedList {
     }
     return false;
   }
+
+  find(value) {
+    if (!this.node) {
+      return null;
+    }
+    let index = 0;
+    let node = this.node;
+    while (node.next) {
+      if (node.value === value) {
+        return index;
+      }
+      index++;
+      node = node.next;
+    }
+    if (node.value === value) {
+      return index;
+    }
+    return null;
+  }
 }
