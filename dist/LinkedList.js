@@ -68,4 +68,16 @@ export class LinkedList {
     }
     return node;
   }
+
+  pop() {
+    let node = this.node;
+    if (node.next === null) {
+      node.value = null;
+      return;
+    }
+    while (node.next.next) {
+      node = node.next;
+    }
+    node.next = null;
+  }
 }
