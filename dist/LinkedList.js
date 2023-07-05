@@ -53,4 +53,19 @@ export class LinkedList {
     }
     return node;
   }
+
+  at(index) {
+    let node = this.node;
+    if (index === 0) {
+      return node;
+    }
+    for (let i = 0; i < index; i++) {
+      if (node) {
+        node = node.next;
+      } else {
+        return null;
+      }
+    }
+    return node;
+  }
 }
