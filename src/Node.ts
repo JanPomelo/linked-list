@@ -1,9 +1,9 @@
 "use strict";
 
-class LinkedListNode {
+export class LinkedListNode {
   value: any;
-  next: LinkedListNode;
-  constructor(value: any = null, next: any = null) {
+  next: LinkedListNode | null;
+  constructor(value: any = null, next: LinkedListNode | null = null) {
     this.value = value;
     this.next = next;
   }

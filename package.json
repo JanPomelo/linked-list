@@ -9,6 +9,7 @@
   "keywords": [],
   "author": "Jan Steikowski <j.steikowski@aol.com>",
   "license": "MIT",
+  "type": "module",
   "dependencies": {
     "tsc": "^2.0.4"
   }

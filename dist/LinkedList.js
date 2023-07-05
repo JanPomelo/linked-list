@@ -1,14 +1,12 @@
-"use Strict";
-
-import { LinkedListNode } from "./Node";
-
+/* eslint-disable require-jsdoc */
+'use Strict';
+import {LinkedListNode} from './Node.js';
 export class LinkedList {
-  node: LinkedListNode;
-  constructor(node: LinkedListNode) {
+  constructor(node) {
     this.node = node;
   }
-  append(value: any): void {
-    let node: LinkedListNode = this.node;
+  append(value) {
+    let node = this.node;
     if (this.node.value === null) {
       node.value = value;
     } else {
