@@ -132,4 +132,56 @@ export class LinkedList {
     result = result + ' -> ' + node.next;
     return result;
   }
+
+  insetAt(value, index) {
+    if (!this.node) {
+      this.node = new Node(value);
+      return;
+    }
+    if (index === 0) {
+      this.prepend(value);
+      return;
+    }
+    let node = this.node;
+    for (let i = 1; i < index; i++) {
+      if (node.next) {
+        node = node.next;
+      } else {
+        this.append(value);
+        return;
+      }
+    }
+    const nextNode = node.next;
+    node.next = new Node(value, nextNode);
+    return;
+  }
+
+  removeAt(index) {
+    if (!this.node) {
+      return 'List is empty';
+    }
+    let node = this.node;
+    if (index === 0) {
+      if (node.next) {
+        this.node = node.next;
+      }
+    }
+
+    for (let i = 1; i < index; i++) {
+      if (node.next) {
+        node = node.next;
+      } else {
+        return 'index does not exist';
+      }
+    }
+    let nextnext = null;
+    if (node.next) {
+      if (node.next.next) {
+        nextnext = node.next.next;
+      }
+      node.next = nextnext;
+      return;
+    }
+    return 'index does not exist';
+  }
 }
