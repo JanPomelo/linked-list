@@ -28,11 +28,11 @@ the first node in the LinkedList
 
 ###### Arguments
 
-none
+value
 
 ###### Description
 
-adds a node to the end of the LinkedList
+adds a node with the given value to the end of the LinkedList
 
 ###### Returns
 
@@ -42,11 +42,11 @@ void
 
 ###### Arguments
 
-none
+value
 
 ###### Description
 
-adds a node to the beginning of the LinkedList
+adds a node with the given value to the beginning of the LinkedList
 
 ###### Returns
 
