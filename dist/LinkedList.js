@@ -133,7 +133,7 @@ export class LinkedList {
     return result;
   }
 
-  insetAt(value, index) {
+  insertAt(value, index) {
     if (!this.node) {
       this.node = new Node(value);
       return;
