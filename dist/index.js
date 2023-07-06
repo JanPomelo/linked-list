@@ -9,5 +9,5 @@ newList.prepend('deine Mutter');
 // newList.pop();
 // newList.pop();
 // newList.prepend(42);
-console.log(newList.removeAt(2));
+newList.removeAt(4);
 console.log(newList);

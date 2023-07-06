@@ -171,7 +171,10 @@ export class LinkedList {
       if (node.next) {
         node = node.next;
       } else {
-        return 'index does not exist';
+        // eslint-disable-next-line max-len
+        const err = new Error('index is out of bound! Maximum index is ' + (i - 1));
+        console.log(err);
+        return;
       }
     }
     let nextnext = null;
@@ -182,6 +185,8 @@ export class LinkedList {
       node.next = nextnext;
       return;
     }
-    return 'index does not exist';
+    const err = new Error('index is out of bound! Maximum index is ' + (i - 1));
+    console.log(err);
+    return;
   }
 }
